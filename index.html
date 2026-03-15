@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +15,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:Segoe UI, sans-serif;
 }
 
 body{
@@ -30,7 +30,7 @@ position:fixed;
 top:0;
 width:100%;
 background:white;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 padding:15px;
 z-index:1000;
 }
@@ -48,7 +48,7 @@ color:#e75480;
 font-weight:600;
 }
 
-/* HEADER */
+/* HERO */
 
 header{
 height:100vh;
@@ -60,87 +60,111 @@ text-align:center;
 }
 
 header img{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 border-radius:50%;
-border:5px solid #ffc0cb;
+border:6px solid #ffc0cb;
 object-fit:cover;
 margin-bottom:20px;
 }
 
 header h1{
-font-size:2.8rem;
+font-size:3rem;
 color:#e75480;
 }
 
 header p{
+font-size:1.2rem;
+color:#666;
 margin-top:10px;
-font-size:1.1rem;
-color:#555;
 }
 
 /* SECTION */
 
 section{
-padding:80px 12%;
+padding:90px 12%;
 }
 
 .section-title{
 text-align:center;
-font-size:2rem;
+font-size:2.2rem;
 color:#e75480;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 /* ABOUT */
 
 .about{
-max-width:700px;
+max-width:750px;
 margin:auto;
 text-align:center;
-line-height:1.6;
+line-height:1.7;
 }
 
-/* EDUCATION */
+/* GRID */
 
-.edu-card{
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+/* CARDS */
+
+.card{
 background:white;
 border:1px solid #ffd6e7;
-padding:20px;
-margin-bottom:20px;
 border-radius:10px;
+padding:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* SKILLS */
 
-.skills{
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.skill{
-border:1px solid #ffd6e7;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-/* EXPERIENCE */
-
-.exp-card{
-border-left:5px solid #e75480;
-padding:20px;
-margin-bottom:20px;
+.skill-card{
 background:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-border-radius:8px;
+border:1px solid #ffd6e7;
+padding:25px;
+border-radius:12px;
+}
+
+.skill-card h3{
+color:#e75480;
+margin-bottom:10px;
+}
+
+.tags span{
+background:#ffe4ec;
+color:#e75480;
+padding:6px 12px;
+border-radius:20px;
+font-size:0.85rem;
+margin-right:6px;
+}
+
+/* TIMELINE */
+
+.timeline{
+max-width:800px;
+margin:auto;
+}
+
+.timeline-item{
+border-left:4px solid #e75480;
+padding-left:20px;
+margin-bottom:35px;
 }
 
 /* PROJECT */
 
 .project{
-max-width:400px;
+max-width:500px;
 margin:auto;
 border:1px solid #ffd6e7;
 border-radius:10px;
@@ -151,7 +175,7 @@ text-align:center;
 .project img{
 width:100%;
 border-radius:8px;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 /* CONTACT */
@@ -165,8 +189,8 @@ margin-top:20px;
 }
 
 .socials a{
-margin:0 10px;
-font-size:22px;
+margin:0 12px;
+font-size:24px;
 color:#e75480;
 }
 
@@ -176,7 +200,6 @@ footer{
 background:#fff0f5;
 padding:20px;
 text-align:center;
-margin-top:40px;
 }
 
 </style>
@@ -189,20 +212,22 @@ margin-top:40px;
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
-<li><a href="#skills">Skills</a></li>
 <li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Social Internship</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#internship">Internship</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <header>
 
-<img src="pic.jpeg" alt="Yashmi Panchal">
+<img src="pic.jpeg">
 
 <h1>Yashmi Panchal</h1>
 
-<p>Chemical Engineering Student | PDEU</p>
+<p>Chemical Engineering Student | Pandit Deendayal Energy University</p>
 
 </header>
 
@@ -211,9 +236,12 @@ margin-top:40px;
 <h2 class="section-title">About Me</h2>
 
 <p class="about">
-I am a Chemical Engineering student at Pandit Deendayal Energy University with interests in sustainability,
-engineering innovation, and leadership. I enjoy combining technical knowledge with creativity through
-projects, competitions, and community initiatives.
+
+Chemical Engineering undergraduate with interests in sustainability,
+process engineering, and interdisciplinary innovation. I enjoy applying
+engineering concepts alongside leadership, teamwork, and creativity
+through competitions, internships, and student organisations.
+
 </p>
 
 </section>
@@ -222,51 +250,18 @@ projects, competitions, and community initiatives.
 
 <h2 class="section-title">Education</h2>
 
-<div class="edu-card">
+<div class="grid">
+
+<div class="card">
+
 <h3>Pandit Deendayal Energy University</h3>
+
 <p>B.Tech Chemical Engineering</p>
+
 <p>2023 – 2027</p>
+
 <p>CGPA: 8.09</p>
-</div>
 
-<div class="edu-card">
-<h3>Amicus International School, Bharuch</h3>
-<p>CBSE Class XII – 73.6%</p>
-<p>2022</p>
-</div>
-
-<div class="edu-card">
-<h3>Jay Ambe International School, Bharuch</h3>
-<p>CBSE Class X – 92.6%</p>
-<p>2020</p>
-</div>
-
-</section>
-
-<section id="skills">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill">
-<h3>Engineering Tools</h3>
-<p>DWSIM, Aspen, Excel</p>
-</div>
-
-<div class="skill">
-<h3>Design</h3>
-<p>Canva, Presentations</p>
-</div>
-
-<div class="skill">
-<h3>Languages</h3>
-<p>Hindi, English, Gujarati, German (Learning)</p>
-</div>
-
-<div class="skill">
-<h3>Soft Skills</h3>
-<p>Leadership, Collaboration, Documentation</p>
 </div>
 
 </div>
@@ -277,33 +272,177 @@ projects, competitions, and community initiatives.
 
 <h2 class="section-title">Experience</h2>
 
-<div class="exp-card">
+<div class="timeline">
 
-<h3>Summer Intern – Rotary Club of Bharuch</h3>
+<div class="timeline-item">
+
+<h3>Summer Intern — Rotary Club of Bharuch</h3>
+
 <p>May 2024 – June 2024</p>
 
 <p>
-Coordinated with Rotary Club members to organize a prosthetic medical camp,
-distributed kits and refreshments to workers during summer,
-and volunteered in a picnic event for underprivileged children.
+
+Organized community initiatives including prosthetic medical camps,
+distribution of summer kits for workers, and volunteering in
+recreational activities for underprivileged children.
+
 </p>
 
 </div>
-
-<div class="exp-card">
-
-<h3>Leadership & Activities</h3>
-
-<p>Publicity Head – Encode (Computer Science Club)</p>
-<p>Subcommittee Member – IIChE Student Chapter</p>
-<p>Campus Ambassador – Azeotrope IIT Bombay 2026</p>
-<p>L’Oreal Brandstorm Case Competition 2026</p>
 
 </div>
 
 </section>
 
-<section id="projects">
+<section id="skills">
+
+<h2 class="section-title">Skills & Tools</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+
+<h3>Aspen Plus</h3>
+
+<p>Process simulation software used for chemical flowsheet modeling and mass-energy balance analysis.</p>
+
+<div class="tags">
+<span>Process Simulation</span>
+<span>Mass Balance</span>
+<span>Energy Balance</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>DWSIM</h3>
+
+<p>Chemical process simulator used for distillation modeling and vapor-liquid equilibrium analysis.</p>
+
+<div class="tags">
+<span>Distillation</span>
+<span>VLE Modeling</span>
+<span>Thermodynamics</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Chemical Engineering Fundamentals</h3>
+
+<p>Strong foundation in heat transfer, fluid mechanics, mass transfer, and unit operations.</p>
+
+<div class="tags">
+<span>Heat Transfer</span>
+<span>Unit Operations</span>
+<span>Process Design</span>
+</div>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Teamwork</h3>
+
+<p>Experience collaborating with diverse teams in academic projects, competitions, and student organizations.</p>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Leadership</h3>
+
+<p>Led publicity initiatives and coordinated activities within technical student clubs.</p>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Creativity & Design</h3>
+
+<p>Creating engaging promotional materials and visual communication using Canva and presentation tools.</p>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Communication</h3>
+
+<p>Strong written and verbal communication through documentation, presentations, and reports.</p>
+
+</div>
+
+<div class="skill-card">
+
+<h3>Documentation</h3>
+
+<p>Technical report writing, documentation of engineering work, and structured project reporting.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="leadership">
+
+<h2 class="section-title">Positions of Responsibility</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Publicity Head</h3>
+
+<p>Encode — Computer Science Club</p>
+
+</div>
+
+<div class="card">
+
+<h3>Subcommittee Member</h3>
+
+<p>IIChE Student Chapter</p>
+
+</div>
+
+<div class="card">
+
+<h3>Campus Ambassador</h3>
+
+<p>Azeotrope IIT Bombay 2026</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<h2 class="section-title">Courses</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<p>Incubation and Entrepreneurship — NPTEL</p>
+
+</div>
+
+<div class="card">
+
+<p>Data Science for Chemical Engineers — NPTEL (Ongoing)</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="internship">
 
 <h2 class="section-title">Social Internship</h2>
 
@@ -312,9 +451,49 @@ and volunteered in a picnic event for underprivileged children.
 <img src="picture2.jpg">
 
 <p>
-Community engagement work during internship including prosthetic camp
-coordination and volunteering activities with Rotary Club of Bharuch.
+
+Community engagement activities conducted during Rotary Club internship including medical camp coordination and volunteering initiatives.
+
 </p>
+
+</div>
+  <section id="resume">
+
+<h2 class="section-title">Resume</h2>
+
+<div style="
+text-align:center;
+max-width:500px;
+margin:auto;
+border:1px solid #ffd6e7;
+padding:30px;
+border-radius:10px;
+background:white;
+">
+
+<p>You can view or download my resume below.</p>
+
+<br>
+
+<a href="Yashmi Panchal resume.docx"
+style="
+background:#e75480;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+display:inline-block;
+"
+download>
+
+<i class="fa fa-download"></i> Download Resume
+
+</a>
+
+</div>
+
+</section>
 
 </div>
 
@@ -326,8 +505,9 @@ coordination and volunteering activities with Rotary Club of Bharuch.
 
 <div class="contact">
 
-<p>yashmipanchal28@gmail.com</p>
-<p>+91 6355091826</p>
+<p>Email: yashmipanchal28@gmail.com</p>
+
+<p>Phone: +91 6355091826</p>
 
 <div class="socials">
 
